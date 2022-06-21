@@ -77,7 +77,7 @@ $(document).ready(function(){
         dotsEach: true,
         responsive:{
             0:{
-                items:1,
+                items:2,
             },
             400:{
                 items:2,
