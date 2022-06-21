@@ -43,7 +43,7 @@ $(document).ready(function(){
     function initProjects () {
         // Создание карты.
         const myMap = new ymaps.Map('mapProjects', {
-            center: [59.92, 30.31],
+            center: [59.947187, 30.383418],
             zoom: 11,
             controls: []
         });
@@ -66,7 +66,7 @@ $(document).ready(function(){
         myClusterer.add(myGeoObjects);
         myMap.controls.add('zoomControl');
         myMap.geoObjects.add(myClusterer);
-        myMap.behaviors.disable(['scrollZoom']);
+        myMap.behaviors.disable(['scrollZoom', 'drag']);
     }
     function initAddress () {
         const myMap = new ymaps.Map('mapAddress', {
@@ -77,7 +77,7 @@ $(document).ready(function(){
         const address = new ymaps.Placemark([60.074599, 30.353831]);
         myMap.controls.add('zoomControl');
         myMap.geoObjects.add(address);
-        myMap.behaviors.disable(['scrollZoom']);
+        myMap.behaviors.disable(['scrollZoom', 'drag']);
     }
 
     $('.owl-carousel').owlCarousel({
