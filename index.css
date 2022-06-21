@@ -334,6 +334,47 @@ body {
     font-size: 12px;
     padding-right: 12px;
 }
+
+.drawer-nav {
+    width: 23rem;
+    background-color: #edb500;
+}
+
+.drawer--left .drawer-nav {
+    left: -23rem;
+}
+
+.drawer-brand {
+    font-size: 1.7rem;
+}
+
+.drawer-menu-item {
+    font-size: 1.7rem;
+    color: #262424;
+}
+
+.drawer-menu {
+    margin-top: 13px;
+}
+
+.drawer--left.drawer-close .drawer-hamburger-icon,
+.drawer--left.drawer-close .drawer-hamburger-icon:after,
+.drawer--left.drawer-close .drawer-hamburger-icon:before  {
+    background-color: #fff;
+}
+
+.drawer--left.drawer-open .drawer-hamburger {
+    left: 19rem;
+}
+
+.drawer--left.drawer-close .drawer-hamburger {
+    width: 3rem;
+}
+
+.drawer--left.drawer-close .drawer-hamburger {
+    position: relative;
+}
+
 /* Animation */
 
 @keyframes electron {
