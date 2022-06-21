@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+    const now = new Date(); //Текущя дата
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const dob = new Date(2006, 12, 20); // Дата рождения
+    const dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+    let age;
+
+    age = today.getFullYear() - dob.getFullYear();
+    if (today < dobnow) {
+        age = age - 1;
+    }
+
+    document.querySelector('[data-age]').innerHTML = age;
+
+
     const coords = [
         {options: [59.968398,  30.494965], text:'Реконструкция КЛ 6 кВ (ф.24-41 - 7615), протяженностью 3 км для Правобережного РЭС ПАО «Ленэнерго»'},
         {options: [59.971551,  30.449726], text:'Реконструкция  БКТП №7588, строительство кабельного киоска и КЛ-0,4 кВ, заявитель: ООО «Универсал-4»'},
