@@ -1,5 +1,4 @@
-$(document).ready(function(){
-
+document.addEventListener('DOMContentLoaded', () => {
     const now = new Date(); //Текущя дата
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const dob = new Date(2006, 12, 20); // Дата рождения
@@ -116,7 +115,7 @@ $(document).ready(function(){
         event.preventDefault();
 
         const body = 'name=' + encodeURIComponent(event.target[0].value) +
-                '&email=' + encodeURIComponent(event.target[1].value) +
+            '&email=' + encodeURIComponent(event.target[1].value) +
             '&phone=' + encodeURIComponent(event.target[2].value);
         const oReq = new XMLHttpRequest();
         oReq.open('POST', '/main.php', true);
@@ -129,4 +128,4 @@ $(document).ready(function(){
 
         alert('Заявка отправлена!')
     })
-});
+})
