@@ -111,4 +111,22 @@ $(document).ready(function(){
     new WOW().init();
 
     $('.drawer').drawer();
+
+    document.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const body = 'name=' + encodeURIComponent(event.target[0].value) +
+                '&email=' + encodeURIComponent(event.target[1].value) +
+            '&phone=' + encodeURIComponent(event.target[2].value);
+        const oReq = new XMLHttpRequest();
+        oReq.open('POST', '/main.php', true);
+        oReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        oReq.send(body);
+
+        event.target[0].value = "";
+        event.target[1].value= "";
+        event.target[2].value= "";
+
+        alert('Заявка отправлена!')
+    })
 });

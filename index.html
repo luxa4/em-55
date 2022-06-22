@@ -35,7 +35,7 @@
             <li><a class="drawer-menu-item" href="#projects">Проекты</a></li>
         </ul>
     </nav>
-    <a href="" class="header__logo logo">
+    <a href="" class="header__logo">
         <img src="img/logo.png" alt="">
     </a>
     <nav class="header__menu">
@@ -149,10 +149,10 @@
     <section class="question section__light">
         <div class="container">
             <h2 class="h2 h2_dark wow animate__fadeInUp" data-wow-duration="1s">Оставить заявку</h2>
-            <form action="" class="question__form anim">
-                <input type="text" placeholder="Имя" class="form__input">
-                <input id="phone" type="tel" placeholder="Телефон" class="form__input">
-                <input type="text" placeholder="Email" class="form__input">
+            <form class="question__form">
+                <input type="text" placeholder="Имя" class="form__input" required>
+                <input type="text" placeholder="Email" class="form__input" required>
+                <input id="phone" type="tel" placeholder="Телефон" class="form__input" minlength="18">
                 <button type="submit" class="form__btn">Отправить</button>
             </form>
         </div>
@@ -161,9 +161,10 @@
 <footer class="footer section__dark">
     <div class="container">
         <div class="footer__items">
-            <a href="" class="footer__logo">
-                <img src="img/logo.png" alt="Логотип">
-            </a>
+            <div class="footer__logo">
+                <img src="img/logo.png" alt="Логотип" class="footer__img">
+                <span class="footer__title">ЭМ-55</span>
+            </div>
             <nav class="footer__menu">
                 <ul class="menu__list">
                     <li><a href="#home" class="footer__link">Главная</a></li>
@@ -186,7 +187,7 @@
                 </address>
             </div>
             <div class="footer__map">
-                <div id="mapAddress" style="width: 100%; height: 100%"></div>
+                <div id="mapAddress" style="width: 100%; height: 150px"></div>
             </div>
         </div>
     </div>
