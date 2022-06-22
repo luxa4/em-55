@@ -521,6 +521,8 @@ body {
     }
 
     .header__logo {
+        width: 56px;
+        height: 56px;
         display: block;
         grid-column: 2 / 3;
     }
