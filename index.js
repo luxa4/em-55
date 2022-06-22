@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const now = new Date(); //Текущя дата
+    const now = new Date();
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const dob = new Date(2006, 12, 20); // Дата рождения
     const dobnow = new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
-    let age;
 
-    age = today.getFullYear() - dob.getFullYear();
+    let age = today.getFullYear() - dob.getFullYear();
+
     if (today < dobnow) {
         age = age - 1;
     }

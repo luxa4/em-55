@@ -23,7 +23,7 @@
     </script>
     <script src="https://kit.fontawesome.com/c1dd99fcf3.js" crossOrigin="anonymous"></script>
 </head>
-<body class="drawer drawer--left">
+<body class="drawer drawer--left" itemscope itemtype="https://schema.org/Organization">
 <header id="home" class="header">
     <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">toggle navigation</span>
@@ -40,7 +40,7 @@
         </ul>
     </nav>
     <a href="" class="header__logo">
-        <img src="img/logo.svg" alt="Логотип">
+        <img itemprop="logo" src="img/logo.svg" alt="Логотип">
     </a>
     <nav class="header__menu">
         <ul class="list">
@@ -60,7 +60,7 @@
         <div class="container">
             <div class="wrapper">
                 <div>
-                    <h1 class="h1">ЭНЕРГОМОНТАЖ-55</h1>
+                    <h1 class="h1" itemprop="name">ЭНЕРГОМОНТАЖ-55</h1>
                     <div class="home__features">профессионализм, качество, надежность</div>
                 </div>
                 <div class="home__img">
@@ -75,7 +75,7 @@
             <div class="features__items">
                 <div class="features__item wow animate__fadeInLeft" data-wow-duration="2s">
                     <div class="features__name">профессионализм</div>
-                    <div class="features__text"><strong>ООО &laquo;Энергомонтаж-55&raquo;</strong> было основано профессионалами в&nbsp;декабре 2018&nbsp;года, работающих в&nbsp;сфере энергетики и&nbsp;электрификации с&nbsp;2006&nbsp;года.</div>
+                    <div class="features__text"><strong>ООО &laquo;Энергомонтаж-55&raquo;</strong> было основано профессионалами в&nbsp;<span itemprop="foundingDate">декабре 2018&nbsp;года</span>, работающих в&nbsp;сфере энергетики и&nbsp;электрификации с&nbsp;2006&nbsp;года.</div>
                 </div>
                 <div class="features__item wow animate__fadeInRight" data-wow-duration="2s">
                     <div class="features__name features__name_number" data-age>15</div>
@@ -180,12 +180,12 @@
             </nav>
             <div class="footer__details">
                 <address>
-                <ul class="details__list">
-                    <li><i class="fas fa-phone"></i><a href="tel:+78123096855" class="footer__link">+7 (812) 309-68-55</a></li>
-                    <li><i class="fas fa-envelope"></i><a href="mailto:info@em55.ru" class="footer__link">info@em55.ru</a></li>
-                    <li><i class="fas fa-location-arrow"></i> 194292, Санкт-Петербург,
-                        6-й Верхний пер. 12, лит.Б
-                        пом. 33-Н офис 1</li>
+                <ul class="details__list" itemprop="address">
+                    <li><i class="fas fa-phone"></i><a href="tel:+78123096855" class="footer__link" itemprop="telephone">+7 (812) 309-68-55</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:info@em55.ru" class="footer__link" itemprop="email">info@em55.ru</a></li>
+                    <li itemscope itemtype="https://schema.org/PostalAddress"><i class="fas fa-location-arrow"></i> <span itemprop="postalCode">194292</span>, <span itemprop="addressLocality">Санкт-Петербург</span>,
+                        <span itemprop="streetAddress">6-й Верхний пер. 12, лит.Б
+                        пом. 33-Н офис 1</span></li>
                     <li><i class="fas fa-info"></i> ОГРН 1147847367553<br>ИНН 7813627400<br> КПП 781301001</li>
                 </ul>
                 </address>
