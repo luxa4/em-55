@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Создание карты.
         const myMap = new ymaps.Map('mapProjects', {
             center: [59.947187, 30.383418],
-            zoom: 11,
+            zoom: 12,
             controls: []
         });
 
