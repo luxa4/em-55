@@ -114,17 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const body = 'name=' + encodeURIComponent(event.target[0].value) +
-            '&email=' + encodeURIComponent(event.target[1].value) +
-            '&phone=' + encodeURIComponent(event.target[2].value);
+        const form = document.forms[0];
+
         const oReq = new XMLHttpRequest();
         oReq.open('POST', '/main.php', true);
-        oReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        oReq.send(body);
+        oReq.send(new FormData(form));
 
-        event.target[0].value = "";
-        event.target[1].value= "";
-        event.target[2].value= "";
+        form.reset();
 
         alert('Заявка отправлена!')
     })
