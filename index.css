@@ -307,6 +307,7 @@ body {
     height: auto;
 }
 
+
 .footer__title {
     font-size: 2.7rem;
     font-weight: 700;
@@ -318,6 +319,10 @@ body {
 
 .menu__list li {
     margin-bottom: 8px;
+}
+
+.menu__list li a {
+    color: #fff;
 }
 
 .details__list li {
