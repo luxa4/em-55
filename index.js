@@ -127,4 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         alert('Заявка отправлена!')
     })
+
+    document.querySelector('.drawer-menu').addEventListener('click', (event) => {
+        if (event.target.nodeName.toLowerCase() === 'a') {
+            $('.drawer').drawer('close');
+        }
+    })
 })
