@@ -63,9 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const myClusterer = new ymaps.Clusterer();
         myClusterer.add(myGeoObjects);
-        myMap.controls.add('zoomControl');
+        myMap.controls.add('zoomControl', {
+            position: {
+                right: 30,
+                top: 150
+            }});
         myMap.geoObjects.add(myClusterer);
-        myMap.behaviors.disable(['scrollZoom', 'drag']);
+        myMap.behaviors.disable(['scrollZoom']);
     }
     function initAddress () {
         const myMap = new ymaps.Map('mapAddress', {
@@ -76,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const address = new ymaps.Placemark([60.074599, 30.353831]);
         myMap.controls.add('zoomControl');
         myMap.geoObjects.add(address);
-        myMap.behaviors.disable(['scrollZoom', 'drag']);
+        myMap.behaviors.disable(['scrollZoom']);
     }
 
     $('.owl-carousel').owlCarousel({
