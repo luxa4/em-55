@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /d/Leoni/em55 -maxdepth 2 -type f \\\\\\(-name *.config.* -o -name *config* -o -name .env* \\\\\\))",
+      "Bash(wc:*)"
+    ]
+  }
+}
